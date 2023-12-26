@@ -977,7 +977,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     min-width: 24px;
     min-height: 24px;
 
-    color:#0000001A;
+    
     border-radius: 50%;
     background-color: #e7e9fc; 
     border: 1px solid rgba(0, 0, 0, 0.1); 
@@ -996,7 +996,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 .modal-btn-icon {
-    fill:#ffffff;
+   fill:#404bbf;
     width: 8px;
     height: 8px;
     flex-shrink: 0;
@@ -1004,9 +1004,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-.modal-btn-icon:is(:hover, :focus) {
-    fill: #ffffff;
-}
 
 
 
@@ -1025,7 +1022,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .model-form-wrapper{
-    margin-bottom: 16px;
+    margin-bottom: 8px; 
 }
 
 .form-label {
@@ -1070,8 +1067,16 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:focus + .form-icon {
+    stroke:#4D5AE5;
+}
+
+
+
+
  .form-input:focus + .form-icon {
-   fill: #4D5AE5;
+   fill:#4D5AE5;
+   
  }
 
 
@@ -1117,7 +1122,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* Custome checkbox------------ */
 
 
-.checkbox-wrapper {
+.form-agreement { 
     display: block;
     margin-bottom: 24px;
     margin-top: 16px;
@@ -1134,13 +1139,28 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 
+.form-agreement-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-.form-agreement {
- 
-}
-.checkbox {
 
+    width: 16px;
+    height: 16px;   
+
+    border-radius: 1.5px;
+    stroke-width: 1px;
+    stroke: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
 }
+
+
+.form-agreement-icon {
+    opacity:0;
+}
+
+.form-agreement-link {
+}
+
 
 
 .form-checkbox {
@@ -1179,22 +1199,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.form-agreement-checkbox {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
 
-    width: 16px;
-    height: 16px;   
-
-    border-radius: 1.5px;
-    stroke-width: 1px;
-    stroke: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
-}
-.form-agreement-icon {
-    opacity:0;
-}
 .form-agreement-link {
     color: #4d5ae5;
     text-decoration-line: underline;
@@ -1244,8 +1250,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .form-btn:is(:hover, :focus){
     background-color:  var(--OCEAN, #404BBF);
 }
-
-
 
 
 
