@@ -1,4 +1,15 @@
 
+
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+
 /* між сусідніми елементами margin в li */
 
 *,
@@ -32,19 +43,43 @@ img {
 
 
 .container {
-   
-    padding-left: 15px;
-    padding-right: 15px;
+     /* mobile devices */
+    max-width:  320px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right:auto;
-    max-width: 1158px;
+
+
+    /* padding-left: 15px;
+    padding-right: 15px;
    
+    max-width: 1158px;
     width: 1158px;
-    margin: 0 auto;
-    /* display: flex; */
-    /* outline: 2px solid red; */
-    /* display: flex; */
+    margin: 0 auto; */
+   
+    outline: 2px solid red; 
+    outline-offset: -2px;
 }
+   
+@media screen and (min-width:768px) {
+    .container {
+        /* Tablet devices */
+
+        max-width: 768px;  
+    }     
+}
+
+@media screen and (min-width:1158px){
+    .container {
+        /* Desktop devices */
+
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }     
+}
+
 
 
 .p,
@@ -501,13 +536,38 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 .team {
-    /* background-color: var(--five-title-color); */
-    padding-top: 120px;
-    padding-bottom: 120px;
+   
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
     background: var(--CLOUD, #F4F4FD);
    
+
+    padding-top: 96px;
+    padding-bottom: 96px;
     margin: auto;
 }
+
+
+@media screen and (min-width:768px) {
+    .container {
+        /* Tablet devices */
+
+       
+    }     
+}
+
+@media screen and (min-width:1158px){
+    .container {
+        /* Desktop devices */
+   padding-top: 120px;
+    padding-bottom: 120px; 
+    }     
+}
+
+
+
+
+
 
 
 
@@ -928,7 +988,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.backdrop.is-open {
+.backdrop.is-open .hide {
     opacity: 1;
     visibility: visible ;
     pointer-events:initial;
@@ -1415,3 +1475,6 @@ border: none;
 .subscribe-form-icon {
     margin-left: 16px;
 }
+
+
+/* ОБОВЯЗКОВО @ media ПІСЛЯ ЗВИЧАЙНИХ КЛАСІВ */
